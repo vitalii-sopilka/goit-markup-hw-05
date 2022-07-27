@@ -18,9 +18,21 @@
       <nav class="head-navigation">
         <a href="index.html" lang="en" class="head-navigation-logo link">Web<span class="head-navigation-logo-span">Studio</span></a>
         <ul class="head-navigation-list list">
-          <li class="head-navigation-item"><a href="./index.html" class="head-navigation-list-link current link">Студия</a></li>
-          <li class="head-navigation-item"><a href="./portfolio.html" class="head-navigation-list-link link">Портфолио</a></li>
-          <li class="head-navigation-item"><a href=" " class="head-navigation-list-link link">Контакты</a></li>
+          <li class="head-navigation-item">
+            <a href="./index.html" class="head-navigation-list-link current link">
+              Студия
+            </a>
+          </li>
+          <li class="head-navigation-item">
+            <a href="./portfolio.html" class="head-navigation-list-link link">
+              Портфолио
+            </a>
+          </li>
+          <li class="head-navigation-item">
+            <a href=" " class="head-navigation-list-link link">
+              Контакты
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- Header contacts -->
@@ -49,7 +61,7 @@
     <section class="hero">
       <div class="container">
         <h1 class="hero-main">Эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="hero-button" >Заказать услугу</button>
+        <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
       </div>
     </section>
     <!-- Наши преимущества -->
@@ -103,24 +115,27 @@
         <ul class="doing-list list">
           <li class="doing-list-item">
             <img class="doing-list-item-image"
-            src="./images/img_01.jpg"
-            alt="Разработка програмного обеспечения"
-            height="294"
+              src="./images/img_01.jpg"
+              alt="Разработка програмного обеспечения"
+              height="294"
             />
+            <p class="galery-description">Десктопные приложения</p>
           </li>
           <li class="doing-list-item">
             <img class="doing-list-item-image"
-            src="./images/img_02.jpg"
-            alt="Тестирование мобильного приложения"
-            height="294"
+              src="./images/img_02.jpg"
+              alt="Тестирование мобильного приложения"
+              height="294"
             />
+            <p class="galery-description">Мобильные приложения</p>
           </li>
           <li class="doing-list-item">
             <img class="doing-list-item-image"
-            src="./images/img_03.jpg"
-            alt="Работа с палитрой цветов"
-            height="294"
+              src="./images/img_03.jpg"
+              alt="Работа с палитрой цветов"
+              height="294"
             />
+            <p class="galery-description">Дизайнерские решения</p>
           </li>
         </ul>
       </div>
@@ -399,6 +414,17 @@
         </ul>
       </div>
     </div>
-  </footer>
+  </footer> 
+  <!-- бекдроп -->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal-window">
+      <button class="button close" data-modal-close>
+        <svg width="18px" height="18px" class="close-icon">
+          <use href="./images/icons.svg#x"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 </html>
