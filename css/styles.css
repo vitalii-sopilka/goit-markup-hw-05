@@ -80,42 +80,61 @@ img {
 }
 
 .head-navigation-list-link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 0;
   display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-head);
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .head-navigation-item:not(:last-child) {
   margin-right: 50px;
 }
 
-/* Подсветка текущей страницы */
-.current {
-  position: relative;
-  color: var(--color-accent);
-}
-
-.current::after {
+.head-navigation-list-link::after {
   content: "";
   display: block;
   position: absolute;
   left: 0;
-  bottom: -1.75px;
+  bottom: -2%;
   width: 100%;
   height: 4px;
   background-color: var(--color-accent);
   border-radius: 2px;
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.head-navigation-list-link:hover,
+/* Подсветка текущей страницы */
+/* .current {
+  position: relative;
+  color: var(--color-accent);
+} */
+
+/* .current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2%;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+} */
+
+/* .head-navigation-list-link:hover,
 .head-navigation-list-link:focus {
   color: var(--color-accent);
-}
+} */
+
+.head-navigation-list-link:hover::after,
+.head-navigation-list-link:focus::after (
+  width 100%;
+)
 
 /* Модальное окно */
 
@@ -205,7 +224,7 @@ img {
 
 .hero {
   max-width: 1600px;
-  height: 480px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -305,7 +324,7 @@ background-color: var(--color-hover);
   height: 120px;
   justify-content: center;
   align-items: center;
-  background-color: var(--nav-button-backgroud-color);
+  background-color: var(--color-team);
   border-radius: 4px;
   margin-bottom: 30px;
 }
@@ -446,7 +465,6 @@ background-color: var(--color-hover);
 .masters-soc-list {
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
 }
 
 .masters-soc-item {
@@ -501,15 +519,15 @@ background-color: var(--color-hover);
   letter-spacing: 0.03em;
 }
 
-.clients-list{
+.clients-list {
   display: flex;
 }
 
-.clients-item + .clients-item{
+.clients-item + .clients-item {
   margin-left: 30px;
 }
 
-.clients-link{
+.clients-link {
   width: 170px;
   height: 92px;
   display: flex;
@@ -518,6 +536,7 @@ background-color: var(--color-hover);
   border: 1px solid var(--color-icon) ;
   border-radius: 4px;
   color: var(--color-icon);
+  outline: transparent;
 }
 
 .clients-icon {
@@ -674,6 +693,7 @@ border-color: var(--color-accent);
 
 .basement-container {
   display: flex;
+  align-items: baseline;
 }
 
 .basement-link {
@@ -721,7 +741,6 @@ border-color: var(--color-accent);
 
 .footer-column + .footer-column{
   margin-left: 70px;
-  margin-top: 12px;
 }
 
 .socials-text {
