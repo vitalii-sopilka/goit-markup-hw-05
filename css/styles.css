@@ -96,7 +96,6 @@ img {
 .head-navigation-list-link:hover,
 .head-navigation-list-link:focus {
   color: var(--color-accent);
-  /* transition: color var(--transition-time) var(--cubic-function); */
 }
 
 .head-navigation-item:not(:last-child) {
@@ -203,7 +202,6 @@ img {
   margin-right: 10px;
   vertical-align: middle;
   fill: currentColor;
-  /* fill: rgba(175, 177, 184, 1); */
 }
 
 /* ----------ГЕРОЙ---------- */
@@ -456,6 +454,8 @@ background-color: var(--color-hover);
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  transition: color var(--transition-time) var(--cubic-function),
+  background-color var(--transition-time) var(--cubic-function);
 }
 
 .masters-soc-item:first-child {
@@ -469,15 +469,11 @@ background-color: var(--color-hover);
 .masters-soc-link:hover,
 .masters-soc-link:focus {
   background-color: var(--color-accent);
-  transition: color var(--transition-time) var(--cubic-function),
-  background-color var(--transition-time) var(--cubic-function);
 }
 
 .masters-soc-link:hover .master-soc-icon,
 .masters-soc-link:focus .master-soc-icon {
   fill: var(--color-white);
-  transition: color var(--transition-time) var(--cubic-function),
-  background-color var(--transition-time) var(--cubic-function);
 }
 
 /* ---------ПОСТОЯННЫЕ КЛИЕНТЫ---------- */
@@ -517,6 +513,8 @@ background-color: var(--color-hover);
   border-radius: 4px;
   color: var(--color-icon);
   outline: transparent;
+  transition: color var(--transition-time) var(--cubic-function),
+border-color var(--transition-time) var(--cubic-function);
 }
 
 .clients-icon {
@@ -528,8 +526,6 @@ background-color: var(--color-hover);
 .clients-link:focus {
 color: var(--color-accent);
 border-color: var(--color-accent);
-transition: color var(--transition-time) var(--cubic-function),
-border-color var(--transition-time) var(--cubic-function);
 }
 
 .clients-link:hover .clients-icon,
@@ -568,6 +564,9 @@ border-color var(--transition-time) var(--cubic-function);
   border: 0;
   border-radius: 4px;
   padding: 6px 22px;
+  transition: color var(--transition-time) var(--cubic-function),
+  box-shadow var(--transition-time) var(--cubic-function),
+  background-color var(--transition-time) var(--cubic-function);
 }
 
 /* Подсветка первой кнопки */
@@ -582,9 +581,6 @@ border-color var(--transition-time) var(--cubic-function);
   box-shadow: var(--shadows);
   background-color: var(--color-accent);
   color: var(--color-white);
-  transition: color var(--transition-time) var(--cubic-function),
-  box-shadow var(--transition-time) var(--cubic-function),
-  background-color var(--transition-time) var(--cubic-function);
 }
 
 /* Карточки в портфолио */
@@ -604,13 +600,13 @@ border-color var(--transition-time) var(--cubic-function);
 
 .portfolio-list-item-link {
   display: block;
+  transition: box-shadow var(--transition-time) var(--cubic-function);
 } 
 
 .portfolio-list-item-link:hover,
 .portfolio-list-item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow var(--transition-time) var(--cubic-function);
 }
 
 .portfolio-list-item-link:hover .description-wrapper,
@@ -715,6 +711,7 @@ border-color var(--transition-time) var(--cubic-function);
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-alpha);
+  transition: color var(--transition-time) var(--cubic-function);
 }
 
 .basement-adress-item:not(:last-child) {
@@ -761,12 +758,12 @@ border-color var(--transition-time) var(--cubic-function);
   border-radius: 50%;
   color: var(--color-white);
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--transition-time) var(--cubic-function);
 }
 
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--color-accent);
-  transition: background-color var(--transition-time) var(--cubic-function);
 }
 
 .socials-link:hover .socials-icon,
