@@ -104,7 +104,6 @@ img {
 
 /* Подсветка текущей страницы */
 .current {
-  /* position: relative; */
   color: var(--color-accent);
 }
 
@@ -333,11 +332,6 @@ background-color: var(--color-hover);
   padding-bottom: 94px;
 }
 
-/* .wawd img {
-  display: block;
-  max-width: 100%;
-} */
-
 .doing-title {
   margin-bottom: 50px;
   font-size: 36px;
@@ -427,6 +421,10 @@ background-color: var(--color-hover);
   color: var(--color-head);
 }
 
+.masters-soc-item:first-child {
+  margin-left: 0;
+}
+
 .team-list-item-position {
   font-size: 16px;
   line-height: 1.19;
@@ -454,26 +452,22 @@ background-color: var(--color-hover);
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+
+.our-team .masters-soc-link{
+  color: #afb1b8;
   transition: color var(--transition-time) var(--cubic-function),
   background-color var(--transition-time) var(--cubic-function);
 }
 
-.masters-soc-item:first-child {
-  margin-left: 0;
-}
-
 .master-soc-icon {
-  fill: rgba(175, 177, 184, 1);
+  fill: currentColor
 }
 
-.masters-soc-link:hover,
-.masters-soc-link:focus {
+.our-team .masters-soc-link:hover,
+.our-team .masters-soc-link:focus {
+  color: var(--color-white);
   background-color: var(--color-accent);
-}
-
-.masters-soc-link:hover .master-soc-icon,
-.masters-soc-link:focus .master-soc-icon {
-  fill: var(--color-white);
 }
 
 /* ---------ПОСТОЯННЫЕ КЛИЕНТЫ---------- */
